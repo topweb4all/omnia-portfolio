@@ -12,7 +12,7 @@
 
 This is a bilingual personal portfolio website for Omnia Ahmed:
 
-> AI Vibe Coder | Web Developer | QA Tester | Brand Strategist
+> AI Web Developer | WordPress & Landing Pages
 
 The template is designed to present professional experience, technical skills, certifications, projects, client testimonials, and contact links in a polished dark and gold visual style.
 
@@ -31,7 +31,9 @@ The template is designed to present professional experience, technical skills, c
 - Client testimonial slider.
 - LinkedIn, GitHub, and Upwork buttons.
 - Upwork link in the main project button.
-- GitHub link in the secondary hero button.
+- CV download button (`Omnia Ahmed ATS.pdf`) in the secondary hero position.
+- About section with a personal pitch and an interactive `about-me.js` code editor card.
+- Interactive skills showcase with six color-coded tabs and auto-cycling panels.
 - Professional experience cards.
 - Certificates timeline.
 - Contact form using `mailto:`.
@@ -51,6 +53,7 @@ The template is designed to present professional experience, technical skills, c
 ```text
 omnia-portfolio/
 ├── index.html
+├── Omnia Ahmed ATS.pdf
 ├── README.md
 ├── Gemini_Generated_Image_6yerpd6yerpd6yer.jpg
 └── images/
@@ -62,7 +65,7 @@ omnia-portfolio/
 ### How to Run Locally
 
 1. Download or clone the repository.
-2. Keep `index.html` and the profile image in the same folder.
+2. Keep `index.html`, the profile image, and `Omnia Ahmed ATS.pdf` in the same folder.
 3. Keep the project images inside the `images` folder.
 4. Open `index.html` in a browser.
 
@@ -83,7 +86,7 @@ The filenames and folder names are case-sensitive. Make sure they match exactly.
 ### GitHub Pages Deployment
 
 1. Create a GitHub repository.
-2. Upload `index.html`, the profile image, and the `images` folder.
+2. Upload `index.html`, the profile image, `Omnia Ahmed ATS.pdf`, and the `images` folder.
 3. Open **Settings → Pages**.
 4. Select **Deploy from a branch**.
 5. Select the `main` branch and the `/root` folder.
@@ -124,6 +127,7 @@ Update the following sections with your real information when needed:
 - Client testimonials.
 - Project images.
 - Social media links.
+- The CV file (`Omnia Ahmed ATS.pdf`).
 
 ### Adding Project Images
 
@@ -168,7 +172,7 @@ You may use and customize this template for your personal portfolio. Replace the
 
 هذا قالب Portfolio شخصي ثنائي اللغة لأمنية أحمد، ويعرض هويتها المهنية:
 
-> AI Vibe Coder | Web Developer | QA Tester | Brand Strategist
+> مطورة ويب بالذكاء الاصطناعي | ووردبريس وصفحات الهبوط
 
 تم تصميم القالب بأسلوب داكن مع لمسات ذهبية، ويحتوي على أقسام الخبرات، المهارات، التقنيات، الشهادات، المشاريع، تقييمات العملاء وطرق التواصل.
 
@@ -187,7 +191,9 @@ You may use and customize this template for your personal portfolio. Replace the
 - Slider لتقييمات العملاء.
 - أزرار LinkedIn وGitHub وUpwork.
 - زر بدء المشروع يفتح حساب Upwork.
-- زر GitHub يفتح حساب GitHub.
+- زر تحميل السيرة الذاتية (`Omnia Ahmed ATS.pdf`) في قسم البداية.
+- قسم «نبذة عني» مع بطاقة محرر أكواد تفاعلية (`about-me.js`).
+- عرض مهارات تفاعلي بستة تبويبات ملوّنة تتبدل تلقائيًا.
 - بطاقات للخبرات المهنية.
 - Timeline للشهادات والتعليم.
 - نموذج تواصل يعمل باستخدام `mailto:`.
@@ -207,6 +213,7 @@ You may use and customize this template for your personal portfolio. Replace the
 ```text
 omnia-portfolio/
 ├── index.html
+├── Omnia Ahmed ATS.pdf
 ├── README.md
 ├── Gemini_Generated_Image_6yerpd6yerpd6yer.jpg
 └── images/
@@ -218,7 +225,7 @@ omnia-portfolio/
 ### تشغيل القالب محليًا
 
 1. حمّلي المستودع أو انسخيه إلى جهازك.
-2. ضعي ملف `index.html` وصورة البروفايل في نفس المجلد.
+2. ضعي ملف `index.html` وصورة البروفايل وملف `Omnia Ahmed ATS.pdf` في نفس المجلد.
 3. ضعي صور المشاريع داخل مجلد `images`.
 4. افتحي ملف `index.html` باستخدام المتصفح.
 
@@ -239,7 +246,7 @@ images/ai-workflow.png
 ### رفع الموقع على GitHub Pages
 
 1. أنشئي مستودعًا جديدًا على GitHub.
-2. ارفعي ملف `index.html` وصورة البروفايل ومجلد `images`.
+2. ارفعي ملف `index.html` وصورة البروفايل وملف `Omnia Ahmed ATS.pdf` ومجلد `images`.
 3. افتحي **Settings → Pages**.
 4. اختاري **Deploy from a branch**.
 5. اختاري فرع `main` ومجلد `/root`.
@@ -280,6 +287,7 @@ your.email@example.com
 - شهادات العملاء.
 - صور المشاريع.
 - روابط وسائل التواصل الاجتماعي.
+- ملف السيرة الذاتية (`Omnia Ahmed ATS.pdf`).
 
 ### إضافة صور المشاريع
 
