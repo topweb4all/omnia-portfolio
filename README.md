@@ -20,6 +20,7 @@ The template is designed to present professional experience, technical skills, c
 
 - Arabic and English language toggle.
 - Automatic RTL and LTR direction switching.
+- Direction-aware decorative accents that flip with the text direction.
 - Responsive design for desktop, tablet, and mobile.
 - Dark interface with gold accents.
 - Animated custom cursor on desktop.
@@ -32,12 +33,40 @@ The template is designed to present professional experience, technical skills, c
 - LinkedIn, GitHub, and Upwork buttons.
 - Upwork link in the main project button.
 - CV download button (`Omnia Ahmed ATS.pdf`) in the secondary hero position.
-- About section with a personal pitch and an interactive `about-me.js` code editor card.
-- Interactive skills showcase with six color-coded tabs and auto-cycling panels.
+- About section with two side-by-side cards: the full written pitch (no button or CTA link) next to a macOS-style `about-me.js` code editor card.
+- Interactive skills showcase with six color-coded pill-style tabs and auto-cycling panels.
 - Professional experience cards.
 - Certificates timeline.
 - Contact form using `mailto:`.
 - Project image support from the `images` folder.
+
+### Page Sections Order
+
+The navigation menu and the page sections follow the same order:
+
+1. Hero.
+2. About Me.
+3. Services.
+4. Skills & Tools.
+5. Professional Experience.
+6. Projects.
+7. Certificates.
+8. Testimonials.
+9. Contact.
+
+### About Section
+
+The About section is built as exactly two cards side by side:
+
+- **Text card**: the complete pitch written as plain text — the value proposition ("I help small businesses and startups launch fast, reliable websites without overpaying for agency work."), a short bio with the name, a "What I do" list (business websites, landing pages, portfolios — fixes, redesign, and speed improvement — brand-aligned design — testing before delivery), the "How I work" steps (reference + requirements — confirm scope, price and deadline — build + test + 2 free revisions), and a highlighted closing note: "I reply within 1 hour." The old gold CTA button was removed; this note is plain text, not a link.
+- **Code editor card**: a macOS-style editor window (`about-me.js`) with traffic-light dots, numbered lines, and syntax coloring. The bilingual slogan is the highlighted `mission` line — "أكثر من مجرد كود" (Arabic) / "More than just code" (English) — in glowing gold with a blinking cursor.
+
+Implementation notes:
+
+- Every text in the section is bilingual (`data-ar` / `data-en`) and switches with the language toggle, including the slogan inside the editor.
+- The gold accent bars on the list items use logical CSS properties (`border-inline-start`), so they sit on the correct side in both RTL and LTR.
+- The Tools card was removed from this section to avoid duplicating the "Skills & Tools" section.
+- On screens up to 600px wide, the two cards stack vertically in one column.
 
 ### Technologies
 
@@ -128,6 +157,7 @@ Update the following sections with your real information when needed:
 - Project images.
 - Social media links.
 - The CV file (`Omnia Ahmed ATS.pdf`).
+- About section texts: every element carries both `data-ar` and `data-en`; edit them together so the language toggle stays in sync (the slogan inside the code editor is updated the same way).
 
 ### Adding Project Images
 
@@ -180,6 +210,7 @@ You may use and customize this template for your personal portfolio. Replace the
 
 - زر للتبديل بين العربية والإنجليزية.
 - تغيير اتجاه الصفحة تلقائيًا بين RTL وLTR.
+- زخارف ومؤشرات جمالية تتبع اتجاه النص تلقائيًا.
 - تصميم متجاوب مع الكمبيوتر والتابلت والهاتف.
 - واجهة داكنة بلمسات ذهبية.
 - مؤشر مخصص متحرك على الكمبيوتر.
@@ -192,12 +223,40 @@ You may use and customize this template for your personal portfolio. Replace the
 - أزرار LinkedIn وGitHub وUpwork.
 - زر بدء المشروع يفتح حساب Upwork.
 - زر تحميل السيرة الذاتية (`Omnia Ahmed ATS.pdf`) في قسم البداية.
-- قسم «نبذة عني» مع بطاقة محرر أكواد تفاعلية (`about-me.js`).
-- عرض مهارات تفاعلي بستة تبويبات ملوّنة تتبدل تلقائيًا.
+- قسم «نبذة عني» بصندوقين جنب بعض: صندوق نصوص كامل بدون زر بجانب صندوق محرر أكواد بستايل ماك (`about-me.js`).
+- عرض مهارات تفاعلي بستة تبويبات دائرية ملوّنة تتبدل تلقائيًا.
 - بطاقات للخبرات المهنية.
 - Timeline للشهادات والتعليم.
 - نموذج تواصل يعمل باستخدام `mailto:`.
 - دعم صور المشاريع من مجلد `images`.
+
+### ترتيب أقسام الصفحة
+
+قائمة التنقل وأقسام الصفحة تتبعان نفس الترتيب:
+
+1. البداية.
+2. نبذة عني.
+3. الخدمات.
+4. المهارات والأدوات.
+5. الخبرات المهنية.
+6. المشاريع.
+7. الشهادات.
+8. آراء العملاء.
+9. تواصل.
+
+### قسم «نبذة عني»
+
+صُمم قسم النبذة كصندوقين جنب بعض:
+
+- **صندوق النصوص**: نص النبذة كاملًا مكتوب كنصوص عادية — جملة الافتتاحية («أساعد الشركات الصغيرة والشركات الناشئة على إطلاق مواقع سريعة وموثوقة دون دفع مبالغ زائدة مقابل أعمال الوكالات»)، التعريف بالاسم، قائمة «ماذا أقدم» (مواقع أعمال وصفحات هبوط وبورتفوليو — إصلاح وإعادة تصميم وتحسين سرعة — تصميم متوافق مع الهوية — اختبار قبل التسليم)، خطوات «كيف أعمل» (إرسال مرجع ومتطلبات — تأكيد النطاق والسعر والموعد — تنفيذ واختبار مع تعديلين مجانيين)، وفي النهاية ملاحظة مميزة «أرد خلال ساعة واحدة» كنص بارز وليس زرًا أو رابطًا؛ حيث حُذف الزر الذهبي القديم.
+- **صندوق محرر الأكواد**: نافذة محرر بستايل ماك (`about-me.js`) بنقاط التحكم الثلاث، وأرقام للأسطر، وتلوين تركيبي، ويظهر فيها الشعار ثنائي اللغة كقيمة `mission` باللون الذهبي المضيء مع مؤشر كتابة وامض — «أكثر من مجرد كود» بالعربية و«More than just code» بالإنجليزية.
+
+ملاحظات تنفيذية:
+
+- كل نصوص القسم ثنائية اللغة (`data-ar` / `data-en`) وتتغير مع زر التبديل، بما في ذلك الشعار داخل المحرر.
+- الأشرطة الذهبية في القوائم تستخدم خصائص CSS منطقية (`border-inline-start`) لتظهر في الجهة الصحيحة في RTL وLTR.
+- حُذفت بطاقة الأدوات من هذا القسم لتجنب تكرار قسم «المهارات والأدوات».
+- على الشاشات بعرض 600px أو أقل يترص الصندوقان في عمود واحد.
 
 ### التقنيات المستخدمة
 
@@ -288,6 +347,7 @@ your.email@example.com
 - صور المشاريع.
 - روابط وسائل التواصل الاجتماعي.
 - ملف السيرة الذاتية (`Omnia Ahmed ATS.pdf`).
+- نصوص قسم «نبذة عني»: كل عنصر يحمل `data-ar` و`data-en` معًا، عدّليهما معًا حتى يبقى تبديل اللغة متزامنًا (الشعار داخل محرر الأكواد يُعدَّل بالطريقة نفسها).
 
 ### إضافة صور المشاريع
 
